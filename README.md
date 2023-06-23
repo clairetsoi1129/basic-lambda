@@ -20,14 +20,32 @@ In Identity and Access Manaagement in AWS (IAM), add user and user group with be
 3. In Use case: Other, click Next
 4. In Description: lambda-key
 5. Copy the ACCESS_KEY and SECRET_ACCESS_KEY
+6. In github settings, create the repository secret
+   - AWS_ACCESS_KEY_ID=<ACCESS_KEY>
+   - AWS_SECRET_ACCESS_KEY=<SECRET_ACCESS_KEY>
 
-##
+## Develop the lambda functions
 
-- Open IDE and run below
+1. Open IDE and run below
+
+- Install serverless framework
 
 ```
-npm install -g npm@9.7.2
+npm install -g serverless
+```
+
+- Create boilerplate lambda code
+
+```
 serverless create --template aws-nodejs
+```
+
+- Create main.yaml by copying the yaml content in https://github.com/serverless/github-action
+
+- Deploy
+
+```
 serverless deploy
 ```
+
 # basic-lambda

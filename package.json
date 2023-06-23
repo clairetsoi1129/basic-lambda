@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "serverless create --template aws-nodejs"
+  },
+  "dependencies": {
+    "serverless": "^3.32.2"
+  },
+  "name": "basic-lambda"
+}
