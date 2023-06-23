@@ -42,10 +42,14 @@ serverless create --template aws-nodejs
 
 - Create main.yaml by copying the yaml content in https://github.com/serverless/github-action
 
-- Deploy
+- Deploy by commiting the main.yaml, it will auto deploy by github action
 
-```
-serverless deploy
-```
+- Check the lambda function is deployed
+  Goto Lambda in AWS
+
+## Problem solving:
+
+- Error: Stack:arn:aws:cloudformation is in ROLLBACK_COMPLETE state and can not be updated.
+  This happens when the previous build is not successful, to resolve, please go to Cloudformation in AWS and manually delete the stack.
 
 # basic-lambda
